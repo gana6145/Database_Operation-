@@ -32,7 +32,7 @@ public class DataBase {
 			if(size<db.length-0.7) {
 				db[size]=new Student(name,age,year,degree,marks,blood,gender,roll);
 				size++;
-				System.out.println("Student added Successfully");
+				
 				return true;
 			}
 			else {
@@ -68,6 +68,19 @@ public class DataBase {
 	 }
 	
  }
+ public void displayDb(Student arr[]) {
+	 if(login) {
+		 for(int i=0;i<size;i++) {
+			 arr[i].displayStudent();
+		 }
+		 
+	 }
+	 else {
+		 System.out.println("please Login");
+		 
+	 }
+	
+ }
  public void searchByName(String name) {
 	 if(login)
 	 {
@@ -88,5 +101,33 @@ public class DataBase {
 		 System.out.println("please Login");
 		 
 	 }
+ }
+ 
+ public void displayStudentSortedByRollNo() {
+	 Student [] arr=sortByRollNo();
+	 displayDb(arr);
+	 
+ }
+ private Student[] sortByRollNo() {
+	 Student[] temp=new Student[size];
+	 for(int i=0;i<size;i++) {
+		 temp[i]=db[i];
+	 }
+	 
+	 for(int i=0;i<size;i++) {
+		 for(int j=i+1;j<size;j++) {
+			 if(temp[i].roll>temp[j].roll) {
+				 Student a=temp[i];
+				 temp[i]=temp[j];
+				 temp[j]=a;
+				 
+			 }
+		 }
+		 
+	 }
+	 return temp;
+	 
+	 
+	 
  }
 }

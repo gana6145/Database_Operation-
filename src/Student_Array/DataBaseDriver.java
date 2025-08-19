@@ -16,7 +16,9 @@ public class DataBaseDriver {
 		DB1.addStudent("Raju", 17, 2025, "BE", 91, "B+", 'M', 17);
 		DB1.addStudent("Neha", 23, 2025, "BE", 76, "O", 'f', 9);
 		//DB1.displayDb();
-		DB1.searchByName("om");
+		DB1.displayStudentSortedByRollNo();
+		
+		
 	}
 
 }
