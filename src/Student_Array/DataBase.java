@@ -108,6 +108,7 @@ public class DataBase {
 	 displayDb(arr);
 	 
  }
+ 
  private Student[] sortByRollNo() {
 	 Student[] temp=new Student[size];
 	 for(int i=0;i<size;i++) {
@@ -130,4 +131,89 @@ public class DataBase {
 	 
 	 
  }
+ public void displayStudentSortedByMarks() {
+	 Student [] arr=sortByMarks();
+	 displayDb(arr);
+	 
+ }
+ 
+ private Student[] sortByMarks() {
+	 Student[] temp=new Student[size];
+	 for(int i=0;i<size;i++) {
+		 temp[i]=db[i];
+	 }
+	 
+	 for(int i=0;i<size;i++) {
+		 for(int j=i+1;j<size;j++) {
+			 if(temp[i].marks>temp[j].marks) {
+				 Student a=temp[i];
+				 temp[i]=temp[j];
+				 temp[j]=a;
+				 
+			 }
+		 }
+		 
+	 }
+	 return temp;
+	 
+	 
+	 
+ }
+ public void displayStudentSortedByMarksDesc() {
+	 Student [] arr=sortByMarksDesc();
+	 displayDb(arr);
+	 
+ }
+ private Student[] sortByMarksDesc() {
+	 Student[] temp=new Student[size];
+	 for(int i=0;i<size;i++) {
+		 temp[i]=db[i];
+	 }
+	 
+	 for(int i=0;i<size;i++) {
+		 for(int j=i+1;j<size;j++) {
+			 if(temp[i].marks<temp[j].marks) {
+				 Student a=temp[i];
+				 temp[i]=temp[j];
+				 temp[j]=a;
+				 
+			 }
+		 }
+		 
+	 }
+	 return temp;
+	 
+	 
+	 
+ }
+ 
+ public void displayStudentSortedByname() {
+	 Student [] arr=sortByName();
+	 displayDb(arr);
+	 
+ }
+ 
+ private Student[] sortByName() {
+	 Student[] temp=new Student[size];
+	 for(int i=0;i<size;i++) {
+		 temp[i]=db[i];
+	 }
+	 
+	 for(int i=0;i<size;i++) {
+		 for(int j=i+1;j<size;j++) {
+			 if(temp[i].name.compareToIgnoreCase(temp[j].name) > 0) {
+				 Student a=temp[i];
+				 temp[i]=temp[j];
+				 temp[j]=a;
+				 
+			 }
+		 }
+		 
+	 }
+	 return temp;
+	 
+	 
+	 
+ }
+ 
 }
