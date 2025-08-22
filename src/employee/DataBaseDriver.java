@@ -22,7 +22,9 @@ public class DataBaseDriver {
 		//emp.displayEmp();
 		//emp.displayEmpByDeptno(10);
 		//emp.displayEmployeeByEmno(7698);
-		emp.displayEmployeeUnderEmployee("BLAKE");
+		//emp.displayEmployeeUnderEmployee("BLAKE");
+		emp.showEmployeeBySal(800);
+		emp.serachEmpbySalRange(800, 2000);
 		
 	}
 

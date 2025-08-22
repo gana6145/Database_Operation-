@@ -4,6 +4,7 @@ public class DataBase {
 	private String userName;
 	private String password;
 	private Employee []employeeDB=new Employee[10];
+	
 	private int size;
 	private boolean islogin;
 	public DataBase(String userName, String password) {
@@ -84,6 +85,21 @@ public class DataBase {
 		return arr;
 		
 		
+	}
+	public void showEmployeeBySal(int  sal) {
+		for(int i=0;i<size;i++) {
+			if(employeeDB[i].sal==sal) {
+				System.out.println(employeeDB[i]);
+				
+			}
+		}
+	}
+	public void serachEmpbySalRange(int a,int b) {
+		for(int i=0;i<size;i++) {
+			if(employeeDB[i].sal>a && employeeDB[i].sal<b) {
+				System.out.println(employeeDB[i]);
+				
+			}	}
 	}
 	
 	
