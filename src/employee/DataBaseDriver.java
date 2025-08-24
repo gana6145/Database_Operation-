@@ -19,12 +19,19 @@ public class DataBaseDriver {
         emp.addEmployee("FORD", 7902, 7566, 3000, "ANALYST", "03-DEC-81", 0, 20);
         emp.addEmployee("MILLER", 7934, 7782, 1300, "CLERK", "23-JAN-82", 0, 10);
 		
-		//emp.displayEmp();
+		emp.displayEmp();
 		//emp.displayEmpByDeptno(10);
 		//emp.displayEmployeeByEmno(7698);
 		//emp.displayEmployeeUnderEmployee("BLAKE");
-		emp.showEmployeeBySal(800);
-		emp.serachEmpbySalRange(800, 2000);
+		//emp.showEmployeeBySal(800);
+		//emp.serachEmpbySalRange(800, 2000);
+        //emp.updateEmployeeDetails();
+       // emp.displayEmployeeByEmno(7369);
+		emp.deleteEmployee();
+		emp.deleteEmployee();
+		emp.displayEmp();
+        
+        
 		
 	}
 
